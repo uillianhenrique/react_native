@@ -16,21 +16,25 @@ import {
 
 export default function Login() {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [senha, setSenha] = useState('');
 
-  const ref_password = useRef();
+  const refSenha = useRef();
+
+  function convidado() {
+    navigate('Register', {auth: false});
+  }
 
   const {navigate} = useNavigation();
   const [disabled, setDisabled] = useState(true);
   const [loading, setLoading] = useState(false);
 
   useMemo(() => {
-    if (email !== '' && password !== '') {
+    if (email !== '' && senha !== '') {
       setDisabled(false);
     } else {
       setDisabled(true);
     }
-  }, [email, password]);
+  }, [email, senha]);
 
   function authentication() {
     setLoading(true);
@@ -45,7 +49,7 @@ export default function Login() {
         });
       }
 
-      if (password !== '12345678') {
+      if (senha !== '12345678') {
         return RNToasty.Error({
           title: 'Senha inválida!',
           withIcon: false,
@@ -66,16 +70,16 @@ export default function Login() {
           keyboardType="email-address"
           autoCapitalize="none"
           onChangeText={text => setEmail(text)}
-          onSubmitEditing={() => ref_password.current.focus()}
+          onSubmitEditing={() => refSenha.current.focus()}
         />
       </InputContainer>
 
       <InputContainer>
         <Input
           placeholder="Senha"
-          onChangeText={text => setPassword(text)}
+          onChangeText={text => setSenha(text)}
           secureTextEntry={true}
-          ref={ref_password}
+          ref={refSenha}
         />
       </InputContainer>
 
@@ -86,6 +90,10 @@ export default function Login() {
           <TextButton disabled> Entrar </TextButton>
         </Button>
       )}
+
+      <ButtonInvited onPress={() => convidado()}>
+        <TextInvited>Entrar como convidado</TextInvited>
+      </ButtonInvited>
     </Container>
   );
 }

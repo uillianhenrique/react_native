@@ -14,7 +14,7 @@ import {
 
 import Header from '../../components/header';
 
-import {setProductCart} from '../../store/ducks/cart';
+import {setProductInCar} from '../../store/ducks/cart';
 
 export default function Product() {
   const {products} = useSelector(state => state.product);
@@ -28,7 +28,7 @@ export default function Product() {
     };
 
     setTimeout(() => {
-      dispatch(setProductCart(data));
+      dispatch(setProductInCar(data));
 
       RNToasty.Success({
         title: 'Produto encaminhado p/ o carrinho!',

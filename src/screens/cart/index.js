@@ -33,7 +33,7 @@ export default function Cart() {
       setLoading(false);
 
       RNToasty.Success({
-        title: 'Compra finalizada!',
+        title: 'Sua compra foi finalizada!',
         withIcon: false,
       });
     }, 2000);
