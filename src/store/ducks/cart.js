@@ -20,7 +20,7 @@ export default function reducer(state = initialState, action) {
   }
 }
 
-export function setProductCart(data) {
+export function setProductInCar(data) {
   return {
     type: Types.SET_CART,
     payload: data,
