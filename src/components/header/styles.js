@@ -3,16 +3,17 @@ import {StyleSheet} from 'react-native';
 
 export const HeaderTitle = styled.Text`
   font-size: 26px;
-  font-style: italic;
   margin-top: 25px;
   margin-left: 10px;
   margin-bottom: 10px;
+  align-self: center;
+  color: #ffffff;
 `;
 
 export const styles = StyleSheet.create({
   headerContainer: {
-    backgroundColor: '#DCDCDC',
-    shadowColor: '#000',
+    backgroundColor: 'darkblue',
+    shadowColor: '#fff',
     shadowOffset: {
       width: 0,
       height: 1,

@@ -25,10 +25,10 @@ export const Input = styled.TextInput`
 export const Button = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 42px;
-  margin-top: 20px;
-  border-radius: 10px;
+  width: 50%;
+  height: 45px;
+  margin-top: 30px;
+  border-radius: 3px;
   background-color: green;
 
   ${props =>

@@ -42,14 +42,14 @@ export default function Login() {
     setTimeout(() => {
       setLoading(false);
 
-      if (email !== 'uillian') {
+      if (email !== 'admin') {
         return RNToasty.Error({
           title: 'Email inválido!',
           withIcon: false,
         });
       }
 
-      if (senha !== '12345678') {
+      if (senha !== 'a') {
         return RNToasty.Error({
           title: 'Senha inválida!',
           withIcon: false,

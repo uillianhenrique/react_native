@@ -26,7 +26,7 @@ const BottomNavigationStack = createMaterialBottomTabNavigator(
       screen: RegisterScreen,
       navigationOptions: () => ({
         title: 'Cadastro',
-        tabBarIcon: <IconEntypo name={'add-to-list'} size={22} color="#FFF" />,
+        tabBarIcon: <IconEntypo name={'plus'} size={22} color="#FFF" />,
       }),
     },
 
